@@ -1,6 +1,6 @@
 # Build Stage
 FROM golang:1.21-alpine3.18 AS builder
-#RUN apk add --no-cache bash
+RUN apk add --no-cache bash
 WORKDIR /app
 COPY . .
 RUN go build -o main ./main.go
